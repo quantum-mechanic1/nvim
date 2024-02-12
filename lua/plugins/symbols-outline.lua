@@ -1,5 +1,7 @@
 return {
     "simrat39/symbols-outline.nvim",
+    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    cmd = "SymbolsOutline",
     opts = function()
         local Config = require("lazyvim.config")
         local defaults = require("symbols-outline.config").defaults
@@ -39,7 +41,6 @@ return {
         local filter = Config.kind_filter
 
         if type(filter) == "table" then
-            ---@diagnostic disable-next-line: cast-local-type
             filter = filter.default
             if type(filter) == "table" then
                 for kind, symbol in pairs(defaults.symbols) do
