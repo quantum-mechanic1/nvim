@@ -11,6 +11,8 @@ return {
             },
             templ = {},
             tailwindcss = {},
+            golangci_lint_ls = {},
+            sqlls = {},
         },
     },
 }
